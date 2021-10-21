@@ -1157,18 +1157,9 @@ is divided into following sections:
         <dirname file="${dist.jar}" property="dist.jar.dir"/>
         <mkdir dir="${dist.jar.dir}"/>
     </target>
-    <target name="-pre-jar">
-        <mkdir dir="${build.test.classes.dir}"/>
-        <!-- Empty placeholder for easier customization. -->
-        <!-- You can override this target in the ../build.xml file. -->
-        <javac classpath="${javac.test.classpath}" destdir="${build.test.classes.dir}" srcdir="${test.src.dir}"/>
-        
-        <junit haltonerror="true" haltonfailure="true">
-            <classpath refid="classpath.test" />
-            <formatter type="brief" usefile="false" />
-            <test name="calculatrice.CalculatriceICTest" />
-        </junit>
-    </target>
+   <target name="-pre-jar">
+ 
+ </target> 
     <target depends="init,compile" name="-check-module-main-class">
         <pathconvert property="main.class.file">
             <string value="${main.class}"/>
