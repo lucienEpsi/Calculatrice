@@ -97,5 +97,16 @@ public class CalculatriceICTest {
         assertEquals(expResult, result, 0.0);
 
     }
+ @Test(expected = calculatrice.ExceptionByZero.class)
+    public void testDivisionbyZero() throws Exception {
+        System.out.println("division by zero");
+        double a = 10.0;
+        double b = .00;
+        CalculatriceIC instance = new CalculatriceIC();
+        double expResult = 5.0;
+        double result = instance.division(a, b);
+        assertEquals(expResult, result, 0.0);
+
+    }
 
 }
